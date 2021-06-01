@@ -21,7 +21,7 @@ if r == 1
     
     cont = 0;
     
-    for p = 1:10
+    for p = 1:1000
         if etiquetes_r(p) == test(p,1)
             cont = cont + 1;
         end
@@ -43,7 +43,7 @@ elseif r == 2
    k = 10;
    etiquetes = zeros(1000,1);
    tic;
-   for j = 1:100
+   for j = 1:1000
        img = images_test(j,:);
        etiqueta = ModelKnn(img, arr_temp, labels, k);
        etiqueta = etiqueta(1);
@@ -52,7 +52,7 @@ elseif r == 2
    toc;
    cont = 0;
    
-   for p = 1:100
+   for p = 1:1000
       if etiquetes(p) == test(p,1)
             cont = cont + 1;
       end
