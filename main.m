@@ -1,7 +1,7 @@
 close all
 clear all
 
-% carrega_train()
+% carrega_train()       % Aquesta funció està comentada perquè amb el load de la següent línia de codi no fa falta executar-la
 
 load('train.mat');
 
@@ -16,7 +16,7 @@ r = 2;      % Valor que determina quin tipus de classificador es farà servir
 if r == 1
     k = 10;
     tic;
-    etiquetes_r = ModelKnnHu(images_test, images, labels, k, n);  % En comptes de 10 posar k
+    etiquetes_r = ModelKnnHu(images_test, images, labels, k, n); 
     toc;
     
     cont = 0;
