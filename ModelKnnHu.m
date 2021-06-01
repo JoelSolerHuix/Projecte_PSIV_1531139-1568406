@@ -3,7 +3,7 @@ function etiquetes_ret = ModelKnnHu(imgs, X, labels, k)
 hu_inv_train = zeros(60000,35);
 im_veins = zeros(k);
 etiquetes = zeros(k);
-etiquetes_ret = zeros(10000, 1);
+etiquetes_ret = zeros(1000, 1);
 
 for i = 1:60000          
     temp = reshape(X(i,:), 28, 28);
@@ -16,7 +16,7 @@ for i = 1:60000
 end
 
 
-for i = 1:10000
+for i = 1:1000
     distancies = zeros(60000,1);
     img = reshape(imgs(i,:), 28, 28);
     hu_junt2 = parteix_i_hu(img);
